@@ -1,7 +1,11 @@
-# vm-ssoo-mac
+# Operating Systems Course ARM Mac Setup
 
-Step-by-step guide on how to set up the VM used in FCEyN's  Operating Systems course 
-for macOS with an apple silicon chip.
+
+<img width="756" alt="screenshot" src="https://github.com/user-attachments/assets/c6d81cdc-06c8-4d05-8f06-94a36c84c983">
+
+
+
+
 
 # ⚠ DISCLAIMER ⚠ #
 
