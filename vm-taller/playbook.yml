@@ -7,7 +7,12 @@
       - users.yml 
       - files.yml 
     tasks:
-    - name: Install Make 
+    - name: Update apt remotes
+      become: true
+      apt:
+        upgrade: no
+        update_cache: yes
+    - name: Install Make
       ansible.builtin.package:
         name: make
         state: present
