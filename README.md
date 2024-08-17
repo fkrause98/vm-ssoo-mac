@@ -5,11 +5,17 @@ for macOS with an apple silicon chip.
 
 # ⚠ DISCLAIMER ⚠ #
 
-THIS HAS NOT BEEN PROPERLY TESTED 
+THIS HAS NOT BEEN PROPERLY TESTED: USE AT YOUR OWN RISK.
+
+Also, keep in mind, there are some relevant changes made here:
+- The ansible playbook now runs `apt update`
+- The base box vm is now "cloud-image/ubuntu-20.04", same ubuntu version
+  as the original one, but aarch64 instead of x86_64
+- The course uses VirtualBox for the VM, but at the time of writing this, support for ARM macs is beta at best; so we'll use qemu instead (used in docker for mac and UTM).
 
 ## Dependencies
 
-You probably already have it, but we'll need to install the home brew package manager:
+You probably already have it, but we'll need to install the homebrew package manager:
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
@@ -21,7 +27,12 @@ brew install curl ansible qemu
 
 And we'll need the vagrant cask:
 ```bash
-brew install --cask vagrant
+brew install --cask vagrant ; export PATH=$PATH:/opt/vagrant/bin
+```
+
+Finally, add the qemu plugin for vagrant:
+```bash
+sudo vagrant plugin install vagrant-qemu
 ```
 
 ## VM Setup
@@ -30,17 +41,17 @@ Now that we have everything installed, let's create and run the VM.
 
 Open a terminal wherever you cloned this repo and create the VM:
 ```bash
-cd vm-taller && vagrant up
+cd vm-taller && sudo vagrant up --provider=qemu
 ```
 
-Once everything is set up -- you're done, check everything is in place ssh-ing into the VM:
+Once everything is set up -- you're done, check everything is in place by ssh-ing into the VM:
 ```bash
-vagrant ssh
+sudo vagrant ssh
 ```
 
 Keep in mind: the VM will keep running in the background, so remember to stop it once you're done using it:
 ```bash
-vagrant halt
+sudo vagrant halt
 ```
 
-If you want to start it up again, simply run `vagrant up` again
+If you want to start it up again, simply run `sudo vagrant up --provider=qemu` again
