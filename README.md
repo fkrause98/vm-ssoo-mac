@@ -1,4 +1,4 @@
-# Operating Systems Course ARM Mac Setup
+# Operating Systems VM + ARM Mac Setup
 
 
 <img width="756" alt="screenshot" src="https://github.com/user-attachments/assets/c6d81cdc-06c8-4d05-8f06-94a36c84c983">
