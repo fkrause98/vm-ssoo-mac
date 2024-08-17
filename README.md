@@ -7,7 +7,7 @@ for macOS with an apple silicon chip.
 
 THIS HAS NOT BEEN PROPERLY TESTED: USE AT YOUR OWN RISK.
 
-Also, keep in mind, there are some relevant changes made here:
+Keep in mind, there are some relevant changes made here:
 - The ansible playbook now runs `apt update`
 - The base box vm is now "cloud-image/ubuntu-20.04", same ubuntu version
   as the original one, but aarch64 instead of x86_64
@@ -35,7 +35,12 @@ Finally, add the qemu plugin for vagrant:
 sudo vagrant plugin install vagrant-qemu
 ```
 
-## VM Setup
+## File Sharing
+
+Since we want to share files between the host and the VM, you'll have to enable [SMB file sharing](https://support.apple.com/en-il/guide/mac-help/mh14107/14.0/mac/14.0).
+When you do, the settings app will prompt you for a password, we'll need it for the next step.
+
+## VM Creation
 
 Now that we have everything installed, let's create and run the VM.
 
@@ -43,6 +48,7 @@ Open a terminal wherever you cloned this repo and create the VM:
 ```bash
 cd vm-taller && sudo vagrant up --provider=qemu
 ```
+Here you'll also be asked to input the password you set before for SMB, for user simply use what `whoami` returns
 
 Once everything is set up -- you're done, check everything is in place by ssh-ing into the VM:
 ```bash
@@ -54,4 +60,4 @@ Keep in mind: the VM will keep running in the background, so remember to stop it
 sudo vagrant halt
 ```
 
-If you want to start it up again, simply run `sudo vagrant up --provider=qemu` again
+If you want to start it up again, simply run `sudo vagrant up --provider=qemu`.
