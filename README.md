@@ -43,8 +43,8 @@ sudo vagrant plugin install vagrant-qemu
 ## File Sharing
 
 
-Ya que queremos compartir archivos entre el host y la VM, tenemos que habilitarlo.[SMB file sharing](https://support.apple.com/en-il/guide/mac-help/mh14107/14.0/mac/14.0).
-Cuando se haga, las opciones de la app nos pedirá una contraseña. La vamos a necesitar para el siguiente paso, así que no te la olvides!
+Ya que queremos compartir archivos entre el host y la VM, tenemos que habilitarlo [SMB file sharing](https://support.apple.com/en-il/guide/mac-help/mh14107/14.0/mac/14.0).
+Cuando se haga, las opciones de la app nos pedirá que introduzcamos una contraseña. La vamos a necesitar para el siguiente paso, así que no te la olvides!
 
 
 ## Creación de VM
