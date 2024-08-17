@@ -3,7 +3,7 @@
 <img width="1512" alt="image" src="https://github.com/user-attachments/assets/404439cc-8b53-470e-a0ee-5d30b1fcf64a">
 
 
-# Version en español
+# Versión en español
 
 # ⚠ DISCLAIMER ⚠ #
 
@@ -47,7 +47,7 @@ Ya que queremos compartir archivos entre el host y la VM, tenemos que habilitarl
 Cuando se haga, las opciones de la app nos pedirá una contraseña. La vamos a necesitar para el siguiente paso, así que no te la olvides!
 
 
-## Creacion de VM
+## Creación de VM
 
 
 Ahora que tenemos todo instalado, vamos a crear y correr la VM
