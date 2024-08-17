@@ -1,10 +1,6 @@
 # Operating Systems VM + ARM Mac Setup
 
-
-<img width="756" alt="screenshot" src="https://github.com/user-attachments/assets/c6d81cdc-06c8-4d05-8f06-94a36c84c983">
-
-
-
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/404439cc-8b53-470e-a0ee-5d30b1fcf64a">
 
 
 # ⚠ DISCLAIMER ⚠ #
