@@ -20,17 +20,17 @@ You probably already have it, but we'll need to install the homebrew package man
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-Once we have brew, we'll need to install these dependencies with homebrew:
+Once we have brew, we'll need to install these dependencies:
 ```bash
 brew install curl ansible qemu
 ```
 
-And we'll need the vagrant cask:
+And we'll also need the vagrant cask:
 ```bash
 brew install --cask vagrant ; export PATH=$PATH:/opt/vagrant/bin
 ```
 
-Finally, add the qemu plugin for vagrant:
+Now we can add the qemu plugin for vagrant:
 ```bash
 sudo vagrant plugin install vagrant-qemu
 ```
